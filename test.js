@@ -26,7 +26,7 @@ describe('calculator', function(){
         assert.equal(calculator.hasOwnProperty('sub'), true)
     })
     
-    it('should add two numbers', function(){
+    it('should subtract two numbers', function(){
       assert.equal(calculator.sub(5),5)
       assert.equal(calculator.sub(5),0)
       assert.equal(calculator.sub(-5),5)
@@ -42,7 +42,7 @@ describe('calculator', function(){
         assert.equal(calculator.hasOwnProperty('mul'), true)
     })
     
-    it('should add two numbers', function(){
+    it('should multiply two numbers', function(){
       assert.equal(calculator.mul(5),5)
       assert.equal(calculator.mul(5),25)
       assert.equal(calculator.mul(-5),-125)
