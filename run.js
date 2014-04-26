@@ -5,20 +5,20 @@ var run = function() {
     var show = true;
     var self = this;
     
-    var accumulate = function() {
+    var accumulate = function(operation) {
         prompt.get(['number'], function(err, result){
-            switch(result.number) {
+            switch(operation) {
                 case '+':
-                    console.log('Accumulator: ' + calculator.add(operation.number));
+                    console.log('Accumulator: ' + calculator.add(result.number));
                     break;
                 case '-':
-                    console.log('Accumulator: ' + calculator.sub(operation.number));
+                    console.log('Accumulator: ' + calculator.sub(result.number));
                     break;
                 case '*':
-                    console.log('Accumulator: ' + calculator.mul(operation.number));
+                    console.log('Accumulator: ' + calculator.mul(result.number));
                     break;
                 case '/':
-                    console.log('Accumulator: ' + calculator.div(operation.number));
+                    console.log('Accumulator: ' + calculator.div(result.number));
                     break;
             }
             self.main();
@@ -63,7 +63,7 @@ var run = function() {
                     case '-':
                     case '*':
                     case '/':
-                        accumulate();
+                        accumulate(result.operation);
                         break;
                     default:
                         console.log("That is not an option, please try again.");
